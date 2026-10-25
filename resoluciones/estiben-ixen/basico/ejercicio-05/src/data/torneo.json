@@ -1,0 +1,38 @@
+{
+  "torneo": "Torneo Metropolitano de Futsal",
+  "temporada": "2026",
+  "equipos": [
+    {
+      "id": 1,
+      "nombre": "Titanes FC",
+      "puntos": 15,
+      "pj": 6,
+      "pg": 5,
+      "pp": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Real Futsal",
+      "puntos": 12,
+      "pj": 6,
+      "pg": 4,
+      "pp": 2
+    },
+    {
+      "id": 3,
+      "nombre": "Halcones Sala",
+      "puntos": 9,
+      "pj": 6,
+      "pg": 3,
+      "pp": 3
+    }
+  ],
+  "partidosProximos": [
+    {
+      "id": 101,
+      "local": "Titanes FC",
+      "visitante": "Real Futsal",
+      "fecha": "2026-11-05"
+    }
+  ]
+}
