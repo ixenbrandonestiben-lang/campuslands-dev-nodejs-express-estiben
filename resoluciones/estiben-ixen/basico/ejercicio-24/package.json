@@ -1,0 +1,13 @@
+{
+  "name": "basico-ejercicio-24-estiben-ixen",
+  "version": "1.0.0",
+  "description": "Ejercicio 24 - CRUD basico (Formulas Quimicas) - Campuslands",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
