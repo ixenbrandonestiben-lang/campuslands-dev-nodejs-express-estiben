@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Rico Verhoeven",
+    "division": "Pesado",
+    "record": "64-10-0",
+    "victoriasKo": 20
+  },
+  {
+    "id": 2,
+    "nombre": "Giorgio Petrosyan",
+    "division": "Pluma",
+    "record": "105-3-2",
+    "victoriasKo": 42
+  },
+  {
+    "id": 3,
+    "nombre": "Artem Vakhitov",
+    "division": "Semipesado",
+    "record": "23-6-0",
+    "victoriasKo": 8
+  }
+]
