@@ -1,0 +1,13 @@
+{
+  "name": "basico-ejercicio-21-estiben-ixen",
+  "version": "1.0.0",
+  "description": "Ejercicio 21 - estructura src routes controllers (Animacion 3D) - Campuslands",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
