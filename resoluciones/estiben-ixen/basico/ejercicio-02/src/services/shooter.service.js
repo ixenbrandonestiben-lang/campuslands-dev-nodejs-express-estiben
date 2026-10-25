@@ -35,12 +35,37 @@ function buscarLoadoutPorId(idParam) {
 }
 
 function registrarLoadout({ nombre, armaPrincipal, armaSecundaria, creditos }) {
+  if (!nombre || typeof nombre !== "string" || !nombre.trim()) {
+    const err = new Error("El campo 'nombre' es obligatorio y debe ser un texto valido");
+    err.statusCode = HTTP_STATUS.BAD_REQUEST;
+    throw err;
+  }
+  if (!armaPrincipal || typeof armaPrincipal !== "string" || !armaPrincipal.trim()) {
+    const err = new Error("El campo 'armaPrincipal' es obligatorio");
+    err.statusCode = HTTP_STATUS.BAD_REQUEST;
+    throw err;
+  }
+  const armaNormalizada = armaPrincipal.trim();
+  const esArmaValida = ARMAS_VALIDAS.some(a => a.toLowerCase() === armaNormalizada.toLowerCase());
+  if (!esArmaValida) {
+    const err = new Error(`El arma '${armaPrincipal}' no es valida. Permitidas: ${ARMAS_VALIDAS.join(", ")}`);
+    err.statusCode = HTTP_STATUS.BAD_REQUEST;
+    throw err;
+  }
+
+  const cred = Number(creditos);
+  if (creditos !== undefined && (Number.isNaN(cred) || cred < 0 || cred > 9000)) {
+    const err = new Error("El valor de 'creditos' debe ser un numero entre 0 y 9000");
+    err.statusCode = HTTP_STATUS.BAD_REQUEST;
+    throw err;
+  }
+
   return {
     id: Date.now(),
     nombre: nombre.trim(),
-    armaPrincipal: armaPrincipal.trim(),
-    armaSecundaria: armaSecundaria || "Classic",
-    creditos: Number(creditos) || 2900,
+    armaPrincipal: ARMAS_VALIDAS.find(a => a.toLowerCase() === armaNormalizada.toLowerCase()),
+    armaSecundaria: armaSecundaria && typeof armaSecundaria === "string" ? armaSecundaria.trim() : "Classic",
+    creditos: cred || 2900,
     createdAt: new Date().toISOString()
   };
 }
