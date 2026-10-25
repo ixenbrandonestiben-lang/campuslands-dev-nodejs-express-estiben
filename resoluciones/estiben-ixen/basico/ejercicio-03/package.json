@@ -1,0 +1,22 @@
+{
+  "name": "basico-ejercicio-03-estiben-ixen",
+  "version": "1.0.0",
+  "description": "Ejercicio 03 - Modulos CommonJS (Tematica MOBA esports) - Campuslands",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "commonjs",
+    "moba-esports",
+    "campuslands"
+  ],
+  "author": "Estiben Ixen <ixenbrandonestiben@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
