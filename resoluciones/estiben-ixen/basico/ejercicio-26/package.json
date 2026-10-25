@@ -1,0 +1,13 @@
+{
+  "name": "basico-ejercicio-26-estiben-ixen",
+  "version": "1.0.0",
+  "description": "Ejercicio 26 - codigos de estado (Shooters Competitivos) - Campuslands",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
