@@ -1,3 +1,7 @@
+/**
+ * Modulo principal de inicializacion y exportacion de la aplicacion Express
+ * Ejercicio 02 - Nivel Basico (Shooters Competitivos)
+ */
 const express = require("express");
 const shooterRoutes = require("./routes/shooter.routes");
 
